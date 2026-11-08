@@ -126,7 +126,7 @@
       const questionId = String(state.active[position]);
       if (questionId === "undefined") return;
       const questionData = data.questions[questionId];
-      if (!questionData) continue;
+      if (!questionData) return;
 
       const compare = article.querySelector("p.muted");
       if (compare) {
