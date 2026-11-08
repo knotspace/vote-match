@@ -30,7 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build minified CSS
-        run: npm run build:css
+        run: |
+          mkdir -p assets
+          npm run build:css
       - name: Commit generated CSS
         run: |
           git config user.name "github-actions[bot]"
