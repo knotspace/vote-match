@@ -44,6 +44,48 @@
         "team-mirai": null
       }
     },
+    "8": {
+      "title": "外国人政策",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183078.html",
+      "sourceLabel": "テレビ朝日「外国人政策」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 2,
+          "summary": "在留管理や土地取得のルール見直しを掲げる。受け入れ規模の明示ではないため、管理強化の選択肢に参考対応。"
+        },
+        "ishin": {
+          "choice": 2,
+          "summary": "外国人の移入管理対策・土地取得規制強化を掲げる。"
+        },
+        "chudo": {
+          "choice": 0,
+          "summary": "多文化共生社会基本法や難民等保護法制を掲げる。"
+        },
+        "kokumin": null,
+        "jcp": {
+          "choice": 0,
+          "summary": "難民保護や送還規定の見直し、独立した難民保護機関を掲げる。"
+        },
+        "reiwa": {
+          "choice": 0,
+          "summary": "外国人の包括的権利を規定する法律や入管施設の人権改善を掲げる。"
+        },
+        "sansei": {
+          "choice": 3,
+          "summary": "受け入れ総量と運用の厳格化を掲げる。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": {
+          "choice": 2,
+          "summary": "入管難民法の改正・運用の厳正化を掲げる。"
+        },
+        "sdp": {
+          "choice": 0,
+          "summary": "排除ではなく多文化共生を目指す方針。"
+        },
+        "team-mirai": null
+      }
+    },
     "9": {
       "title": "企業・団体献金",
       "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183081.html",
@@ -84,6 +126,120 @@
           "summary": "企業・団体献金と政治資金パーティーの全面禁止を掲げる。"
         },
         "team-mirai": null
+      }
+    },
+    "15": {
+      "title": "高校・大学などの教育費負担",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183050.html",
+      "sourceLabel": "テレビ朝日「教育・子育て支援」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": null,
+        "ishin": {
+          "choice": 0,
+          "summary": "教育の全課程にかかる費用を所得制限なく無償化する方針。"
+        },
+        "chudo": null,
+        "kokumin": {
+          "choice": 0,
+          "summary": "給食・教材費等を含む高校までの教育費完全無償化を掲げる。"
+        },
+        "jcp": {
+          "choice": 1,
+          "summary": "学費の値上げ中止・値下げ、給付型奨学金の拡充を掲げる。"
+        },
+        "reiwa": {
+          "choice": 0,
+          "summary": "大学院までの無償化を掲げる。"
+        },
+        "sansei": null,
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 0,
+          "summary": "大学までの教育無償化を掲げる。"
+        },
+        "team-mirai": null
+      }
+    },
+    "18": {
+      "title": "選択的夫婦別姓制度",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183079.html",
+      "sourceLabel": "テレビ朝日「ジェンダー・多様性」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": null,
+        "ishin": null,
+        "chudo": {
+          "choice": 0,
+          "summary": "選択的夫婦別姓の実現を掲げる。"
+        },
+        "kokumin": {
+          "choice": 0,
+          "summary": "選択的夫婦別姓制度の導入を掲げる。"
+        },
+        "jcp": {
+          "choice": 0,
+          "summary": "選択的夫婦別姓の実現を掲げる。"
+        },
+        "reiwa": null,
+        "sansei": {
+          "choice": 2,
+          "summary": "選択的夫婦別姓制度を認めない方針。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 0,
+          "summary": "選択的夫婦別姓の法制化を推進する方針。"
+        },
+        "team-mirai": {
+          "choice": 3,
+          "summary": "選択的夫婦別姓を有力案としつつ、多角的に検討する方針。"
+        }
+      }
+    },
+    "19": {
+      "title": "憲法改正",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183077.html",
+      "sourceLabel": "テレビ朝日「憲法改正」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 0,
+          "summary": "自衛隊明記など4項目を中心に憲法改正の実現を掲げる。"
+        },
+        "ishin": {
+          "choice": 0,
+          "summary": "憲法9条改正・国会発議を掲げる。"
+        },
+        "chudo": {
+          "choice": 1,
+          "summary": "立憲主義等を堅持しつつ、責任ある改正論議を深化させる方針。"
+        },
+        "kokumin": null,
+        "jcp": {
+          "choice": 2,
+          "summary": "憲法9条を守り、改憲に反対する方針。"
+        },
+        "reiwa": {
+          "choice": 2,
+          "summary": "改憲発議を阻止し、現行憲法を活用する方針。"
+        },
+        "sansei": {
+          "choice": 0,
+          "summary": "国民自ら憲法を創る「創憲」を推進する方針。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": {
+          "choice": 0,
+          "summary": "憲法9条改正を掲げる。"
+        },
+        "sdp": {
+          "choice": 2,
+          "summary": "憲法9条に基づく平和外交を推進する方針。"
+        },
+        "team-mirai": {
+          "choice": 1,
+          "summary": "基本原理を堅持しつつ、時代に合わせた改正も視野に検討する方針。"
+        }
       }
     }
   },
