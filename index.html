@@ -50,6 +50,14 @@
 <a id="archive-pdf" class="btn" href="#" target="_blank" rel="noopener" style="text-decoration:none">選挙公報を開く ↗</a>
 <a href="https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/index.html" target="_blank" rel="noopener" class="btn secondary" style="text-decoration:none">候補者一覧・公式資料 ↗</a>
 </div>
+<div id="candidate-match" style="margin-top:24px;border-top:1px solid #293950;padding-top:22px">
+<div class="eyebrow">CANDIDATE POLICY MATCH</div>
+<h3 style="font-size:22px;margin:6px 0">候補者の政策とマッチ</h3>
+<p class="muted" style="font-size:13px">選挙当時に公開された候補者本人の政策・アンケートを、確認できた範囲で分類して比較します。未確認の項目は採点せず、候補者ごとに比較できた設問数も表示します。</p>
+<div id="candidate-questions"></div>
+<button class="btn" id="candidate-calc" type="button" style="margin-top:16px">候補者との一致度を見る</button>
+<div id="candidate-results" style="margin-top:18px"></div>
+</div>
 <iframe id="archive-viewer" title="選挙公報" style="width:100%;height:620px;border:1px solid #293950;border-radius:14px;background:#fff;margin-top:16px" loading="lazy"></iframe>
 <div class="notice">この資料は2026年衆院選当時の選挙公報です。現在の所属・政策を示すものではありません。候補者の政策を自動採点した一致率は、内容を設問ごとに検証するまで表示しません。</div>
 </div>
@@ -112,5 +120,79 @@ const archivePdfs={1:"https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/kouho
 const archiveArea=document.getElementById("archive-area");
 if(archiveArea){archiveArea.addEventListener("change",()=>{const n=archiveArea.value;const result=document.getElementById("archive-result");const pending=document.getElementById("archive-pending");if(!n){result.classList.add("hidden");pending.classList.remove("hidden");return;}const url=archivePdfs[n];document.getElementById("archive-district").textContent="栃木県 第"+n+"区";document.getElementById("archive-pdf").href=url;document.getElementById("archive-viewer").src=url+"#view=FitH";result.classList.remove("hidden");pending.classList.add("hidden");});}
 document.getElementById("archive-pref")?.addEventListener("change",e=>{if(e.target.value==="other"){archiveArea.disabled=true;archiveArea.value="";document.getElementById("archive-result").classList.add("hidden");document.getElementById("archive-pending").textContent="他の都道府県の過去選挙データは順次追加します。";}else{archiveArea.disabled=false;document.getElementById("archive-pending").textContent="地域を選ぶと、該当する小選挙区の選挙公報を表示します。";}});
+
+const archiveCandidates={
+1:[
+{name:"船田 はじめ",party:"自由民主党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51227",stance:{economy:2,social:2}},
+{name:"小池 あつし",party:"中道改革連合",src:"https://shugiin.go2senkyo.com/51/senkyoku/51227",stance:{economy:0,education:0}},
+{name:"柏倉 ゆうじ",party:"日本維新の会",src:"https://shugiin.go2senkyo.com/51/senkyoku/51227",stance:{economy:1,social:1,security:0}},
+{name:"大森 紀明",party:"参政党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51227",stance:{economy:0,education:1}},
+{name:"青木 ひろし",party:"日本共産党",src:"https://www.tochigi-senkyo.jp/kouho/kouhou_onsei.html",stance:{}},
+{name:"石川 文三郎",party:"無所属",src:"https://www.tochigi-senkyo.jp/kouho/kouhou_onsei.html",stance:{}}
+],
+2:[
+{name:"福田 あきお",party:"中道改革連合",src:"https://www.tochigi-senkyo.jp/kouho/kouhou_onsei.html",stance:{}},
+{name:"ふじた 久美",party:"参政党",src:"https://www.tochigi-senkyo.jp/kouho/kouhou_onsei.html",stance:{}},
+{name:"いがらし 清",party:"自由民主党",src:"https://www.tochigi-senkyo.jp/kouho/kouhou_onsei.html",stance:{}}
+],
+3:[
+{name:"いが 央",party:"中道改革連合",src:"https://shugiin.go2senkyo.com/51/senkyoku/51231",stance:{economy:0}},
+{name:"やな 和生",party:"自由民主党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51231",stance:{economy:2}},
+{name:"渡辺 しんたろう",party:"無所属",src:"https://shugiin.go2senkyo.com/51/senkyoku/51231",stance:{economy:2}}
+],
+4:[
+{name:"石坂 まさる",party:"自由民主党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51232",stance:{economy:2,education:1}},
+{name:"藤岡 たかお",party:"中道改革連合",src:"https://shugiin.go2senkyo.com/51/senkyoku/51232",stance:{economy:1}},
+{name:"野口 ともこ",party:"参政党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51232",stance:{economy:0,education:1}},
+{name:"大貫 まなぶ",party:"無所属",src:"https://shugiin.go2senkyo.com/51/senkyoku/51232",stance:{}}
+],
+5:[
+{name:"茂木 としみつ",party:"自由民主党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51233",stance:{economy:2,security:0}},
+{name:"寺田 たかふみ",party:"国民民主党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51233",stance:{}},
+{name:"岡村 けい子",party:"日本共産党",src:"https://shugiin.go2senkoku.com/51/senkyoku/51233",stance:{economy:0}},
+{name:"宮本 陽介",party:"参政党",src:"https://shugiin.go2senkyo.com/51/senkyoku/51233",stance:{economy:0}}
+]
+};
+const candidateQuestions=[
+{id:"economy",title:"物価高・経済対策で最も近い考えは？",opts:["減税を中心に家計の手取りを増やす","食料品など対象を絞った減税を行う","成長投資・賃上げで経済を強くする","財政や負担の持続可能性を重視する"]},
+{id:"social",title:"社会保障の持続性について近い考えは？",opts:["給付や公的支援を拡充する","保険料など現役世代の負担を軽くする","負担能力に応じた負担と制度効率化を進める","民間活用など制度全体を見直す"]},
+{id:"education",title:"子育て・教育支援について近い考えは？",opts:["教育費や給食費など公的支援を広げる","給付・減税で子育て世帯の手取りを増やす","働き方や多様な子育てニーズへの支援を整える","教育の質や制度の見直しを優先する"]},
+{id:"security",title:"外交・安全保障について近い考えは？",opts:["防衛力や同盟・同志国との連携を強化する","外交・対話を重視し緊張緩和を目指す","防衛と外交を両立する現実的な対応をとる","一概に決められない"]}
+];
+let candidateAnswers={};
+function renderCandidateQuestions(){
+ const host=document.getElementById("candidate-questions");if(!host)return;
+ host.innerHTML="";
+ candidateQuestions.forEach((q,i)=>{
+  const wrap=document.createElement("div");wrap.className="party";
+  const title=document.createElement("div");title.className="party-name";title.textContent=(i+1)+". "+q.title;wrap.append(title);
+  const select=document.createElement("select");select.dataset.question=q.id;select.style.cssText="width:100%;padding:12px;margin-top:8px;border-radius:11px;background:#18263a;color:#edf3fb;border:1px solid #293950;font:inherit";
+  select.innerHTML='<option value="">選択してください</option>'+q.opts.map((x,j)=>'<option value="'+j+'">'+x+'</option>').join("")+'<option value="skip">回答しない</option>';
+  select.addEventListener("change",()=>{candidateAnswers[q.id]=select.value===""?null:select.value==="skip"?null:Number(select.value)});
+  wrap.append(select);host.append(wrap);
+ });
+}
+function calculateCandidateMatch(){
+ const district=Number(archiveArea?.value);const candidates=archiveCandidates[district]||[];
+ const answered=candidateQuestions.filter(q=>candidateAnswers[q.id]!==undefined&&candidateAnswers[q.id]!==null);
+ const out=document.getElementById("candidate-results");out.innerHTML="";
+ if(!answered.length){out.innerHTML='<div class="notice">まず1問以上回答してください。</div>';return;}
+ const scored=candidates.map(c=>{
+  let matched=0,compared=0;
+  answered.forEach(q=>{if(Number.isInteger(c.stance[q.id])){compared++;if(c.stance[q.id]===candidateAnswers[q.id])matched++;}});
+  return {...c,matched,compared,rate:compared?Math.round(matched/compared*100):null};
+ }).sort((a,b)=>(b.rate??-1)-(a.rate??-1)||b.compared-a.compared);
+ const heading=document.createElement("h4");heading.textContent="回答と公開政策の比較";heading.style.margin="0 0 10px";out.append(heading);
+ const note=document.createElement("p");note.className="muted";note.style.fontSize="12px";note.textContent="一致度は、候補者の公開発言を4つの選択肢に整理し、回答と一致した割合です。候補者の政策全体を評価するものではありません。候補者によって確認できた設問数が異なります。";out.append(note);
+ scored.forEach((c,i)=>{
+  const card=document.createElement("div");card.className="party";
+  const title=document.createElement("div");title.className="party-name";title.textContent=(i+1)+". "+c.name+" — "+c.party;card.append(title);
+  const score=document.createElement("div");score.style.cssText="font-size:24px;font-weight:850;color:#8fc7ff;margin:5px 0";score.textContent=c.compared?c.rate+"%":"一致度は算出できません";card.append(score);
+  const detail=document.createElement("div");detail.className="muted";detail.style.fontSize="12px";detail.textContent=c.compared?"一致 "+c.matched+" / 比較可能 "+c.compared+" 問（あなたの回答 "+answered.length+" 問中）":"公開情報から比較できる回答がまだ確認できません";card.append(detail);
+  const link=document.createElement("a");link.href=c.src;link.target="_blank";link.rel="noopener";link.textContent="候補者の政策・出典を確認 ↗";link.style.fontSize="13px";card.append(link);out.append(card);
+ });
+}
+document.getElementById("candidate-calc")?.addEventListener("click",calculateCandidateMatch);
+renderCandidateQuestions();
 </script>
 </body></html>
