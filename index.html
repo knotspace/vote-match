@@ -183,7 +183,7 @@ function calculateCandidateMatch(){
   return {...c,matched,compared,rate:compared?Math.round(matched/compared*100):null};
  }).sort((a,b)=>(b.rate??-1)-(a.rate??-1)||b.compared-a.compared);
  const heading=document.createElement("h4");heading.textContent="回答と公開政策の比較";heading.style.margin="0 0 10px";out.append(heading);
- const note=document.createElement("p");note.className="muted";note.style.fontSize="12px";note.textContent="一致度は、候補者の公開発言を4つの選択肢に整理し、回答と一致した割合です。候補者の政策全体を評価するものではありません。候補者によって確認できた設問数が異なります。";out.append(note);
+ const note=document.createElement("p");note.className="muted";note.style.fontSize="12px";note.textContent="一致度は、候補者の公開発言・政策アンケートを4つの選択肢に編集上整理し、回答と一致した割合です。候補者本人がこの4択に回答したものではありません。政策全体の評価ではなく、確認できた設問数も候補者ごとに異なります。";out.append(note);
  scored.forEach((c,i)=>{
   const card=document.createElement("div");card.className="party";
   const title=document.createElement("div");title.className="party-name";title.textContent=(i+1)+". "+c.name+" — "+c.party;card.append(title);
