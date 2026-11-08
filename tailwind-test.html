@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Tailwind CSS v4 の表示テストページ。既存のボートマッチ本体には影響しません。">
+  <title>Tailwind CSS テスト｜ボートマッチ</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-match-blue: #0757a6;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-900 antialiased">
+  <header class="border-b border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
+      <a href="./" class="text-lg font-bold tracking-tight text-slate-900 no-underline">ボートマッチ</a>
+      <span class="rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">実験ページ</span>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-5 py-10 sm:py-16">
+    <div class="mb-8 border-l-4 border-match-blue pl-4">
+      <p class="text-sm font-semibold tracking-wide text-match-blue">TAILWIND CSS v4 TEST</p>
+      <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Tailwind CSS 導入テスト</h1>
+      <p class="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+        既存ページを変更せず、Tailwind CSS のユーティリティクラスでレイアウト・配色・レスポンシブ表示を試しています。
+      </p>
+    </div>
+
+    <section class="grid gap-5 md:grid-cols-3">
+      <article class="rounded-xl border border-slate-200 bg-white p-5">
+        <p class="text-xs font-semibold text-slate-500">QUESTION 01</p>
+        <h2 class="mt-3 text-lg font-bold">物価高への対策</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-600">家計への負担を減らすため、どのような政策を重視しますか？</p>
+        <div class="mt-5 space-y-2">
+          <button class="w-full rounded-lg border border-match-blue bg-blue-50 px-4 py-3 text-left text-sm font-semibold text-match-blue transition hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-match-blue">減税を重視する</button>
+          <button class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-left text-sm font-medium text-slate-700 transition hover:border-slate-500 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-match-blue">給付を重視する</button>
+        </div>
+      </article>
+
+      <article class="rounded-xl border border-slate-200 bg-white p-5">
+        <p class="text-xs font-semibold text-slate-500">QUESTION 02</p>
+        <h2 class="mt-3 text-lg font-bold">エネルギー政策</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-600">安定供給と環境負荷の低減をどう両立させるべきでしょうか？</p>
+        <div class="mt-5 space-y-2">
+          <div class="rounded-lg bg-slate-100 px-4 py-3 text-sm text-slate-700">再生可能エネルギーを優先</div>
+          <div class="rounded-lg bg-slate-100 px-4 py-3 text-sm text-slate-700">電源の多様化を優先</div>
+        </div>
+      </article>
+
+      <article class="rounded-xl border border-slate-200 bg-white p-5">
+        <p class="text-xs font-semibold text-slate-500">QUESTION 03</p>
+        <h2 class="mt-3 text-lg font-bold">政治改革</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-600">政治資金の透明性を高めるため、何が必要だと思いますか？</p>
+        <div class="mt-5 rounded-lg border border-dashed border-slate-300 px-4 py-5 text-center text-sm text-slate-500">スマートフォンでも崩れないカード</div>
+      </article>
+    </section>
+
+    <section class="mt-8 rounded-xl border border-slate-200 bg-white p-5 sm:p-6">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm font-semibold text-match-blue">RESPONSIVE CHECK</p>
+          <h2 class="mt-1 text-xl font-bold">画面幅に合わせて自動調整</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-600">画面を狭めると3列から1列に切り替わります。余白・文字サイズ・ボタンの状態もTailwindのクラスで指定しています。</p>
+        </div>
+        <a href="./" class="inline-flex shrink-0 items-center justify-center rounded-lg bg-match-blue px-5 py-3 text-sm font-semibold text-white no-underline transition hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-match-blue">サイトに戻る</a>
+      </div>
+    </section>
+
+    <p class="mt-8 text-xs leading-6 text-slate-500">
+      注：このページは Tailwind Play CDN を使った検証用です。Play CDN は公式に開発・試作用とされており、本番公開では npm と Tailwind CLI でCSSをビルドする方式へ切り替えます。
+    </p>
+  </main>
+</body>
+</html>
