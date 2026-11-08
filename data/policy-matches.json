@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "title": "第51回衆議院議員総選挙 公約比較データ（限定版）",
+  "checkedAt": "2026-11-08",
+  "scope": "2026年衆院選の公約比較。現在の党の全政策・最新政策を網羅するものではない。",
+  "scoring": "各設問について公約の方向性が選択肢と明確に対応すると確認できる場合のみ選択肢番号を付与。曖昧・記載なし・選択肢と軸が異なる場合は null とし、分母に含めない。",
+  "questions": {
+    "2": {
+      "title": "消費税のあり方",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183075.html",
+      "sourceLabel": "テレビ朝日「経済・物価高対策」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 1,
+          "summary": "飲食料品の消費税を2年間対象外とする案の検討を公約に記載。"
+        },
+        "ishin": {
+          "choice": 1,
+          "summary": "食料品の消費税を2年間ゼロにする方針。"
+        },
+        "chudo": null,
+        "kokumin": {
+          "choice": 0,
+          "summary": "消費税を一律5％に減税する方針。"
+        },
+        "jcp": {
+          "choice": 0,
+          "summary": "消費税廃止を目指し、緊急に5％へ減税する方針。"
+        },
+        "reiwa": null,
+        "sansei": {
+          "choice": 0,
+          "summary": "消費税廃止を掲げる。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": {
+          "choice": 1,
+          "summary": "食品の消費税を恒久的にゼロとする方針。選択肢上は一部品目の軽減に近いものとして仮対応。"
+        },
+        "sdp": {
+          "choice": 0,
+          "summary": "消費税ゼロを即時実現する方針。"
+        },
+        "team-mirai": null
+      }
+    },
+    "9": {
+      "title": "企業・団体献金",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183081.html",
+      "sourceLabel": "テレビ朝日「政治とカネ」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 2,
+          "summary": "「禁止よりも公開」を掲げ、透明性・公開性の強化を進める方針。"
+        },
+        "ishin": {
+          "choice": 1,
+          "summary": "企業献金の見直しに向けた政治資金関連法案を提出する方針。具体的な規制内容は設問の選択肢と完全一致しないため参考対応。"
+        },
+        "chudo": {
+          "choice": 1,
+          "summary": "企業・団体献金の受け手制限規制を強化する方針。"
+        },
+        "kokumin": {
+          "choice": 1,
+          "summary": "受け手規制・献金上限規制による透明性向上を掲げる。"
+        },
+        "jcp": {
+          "choice": 0,
+          "summary": "企業・団体献金を全面禁止する方針。"
+        },
+        "reiwa": {
+          "choice": 0,
+          "summary": "企業・団体献金禁止案の法制化を掲げる。"
+        },
+        "sansei": {
+          "choice": 0,
+          "summary": "企業・団体献金の全面禁止を掲げる。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 0,
+          "summary": "企業・団体献金と政治資金パーティーの全面禁止を掲げる。"
+        },
+        "team-mirai": null
+      }
+    }
+  },
+  "parties": [
+    {
+      "id": "jimin",
+      "name": "自由民主党",
+      "official": "https://www.jimin.jp/election/results/sen_shu51/political_promise/"
+    },
+    {
+      "id": "ishin",
+      "name": "日本維新の会",
+      "official": "https://o-ishin.jp/policy/8saku2026.html"
+    },
+    {
+      "id": "chudo",
+      "name": "中道改革連合",
+      "official": "https://craj.jp/static/downloads/craj_policies-2026-text_20260122.pdf"
+    },
+    {
+      "id": "kokumin",
+      "name": "国民民主党",
+      "official": "https://election2026.new-kokumin.jp/file/DPFP-PolicyCollection2026.pdf"
+    },
+    {
+      "id": "jcp",
+      "name": "日本共産党",
+      "official": "https://www.jcp.or.jp/web_policy/16323.html"
+    },
+    {
+      "id": "reiwa",
+      "name": "れいわ新選組",
+      "official": "https://reiwa-shinsengumi.com/policy/"
+    },
+    {
+      "id": "sansei",
+      "name": "参政党",
+      "official": "https://sanseito.jp/political_measures_2026/"
+    },
+    {
+      "id": "genzei-yukoku",
+      "name": "減税日本・ゆうこく連合",
+      "official": "https://yukoku.org/"
+    },
+    {
+      "id": "hoshuto",
+      "name": "日本保守党",
+      "official": "https://hoshuto.jp/policy/"
+    },
+    {
+      "id": "sdp",
+      "name": "社会民主党",
+      "official": "https://sdp.or.jp/51-repre-elec/"
+    },
+    {
+      "id": "team-mirai",
+      "name": "チームみらい",
+      "official": "https://note.com/team_mirai_jp/n/nf20faf54f7d8"
+    }
+  ],
+  "limitations": [
+    "これは政党がこのサイトの設問に回答した公式アンケートではなく、公約の記述を選択肢に対応づけた参考比較。",
+    "選択肢との対応に解釈が入る場合がある。特に「一部減税」「全面廃止」など設問の粒度が異なる政策は一致率を過信しない。",
+    "現時点で照合できるのは22問中2問のみ。候補者別データは未登録。"
+  ]
+}
