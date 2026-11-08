@@ -122,13 +122,9 @@
     if (matchCard) matchCard.replaceWith(scoreSection);
 
     // 回答一覧に設問ごとの公約根拠と照合結果を追加する。
-    for (const article of answersBox.querySelectorAll(".result-row")) {
-      const title = article.querySelector("p strong")?.textContent || "";
-      const position = state.active.findIndex((questionIndex, j) =>
-        (j + 1) + ". " + (window.__voteMatchQuestions?.[questionIndex]?.q || "") === title
-      );
-      if (position < 0) continue;
+    answersBox.querySelectorAll(".result-row").forEach((article, position) => {
       const questionId = String(state.active[position]);
+      if (questionId === "undefined") return;
       const questionData = data.questions[questionId];
       if (!questionData) continue;
 
@@ -171,7 +167,7 @@
 
       detail.append(sum, sourceLine, sourceLink, list);
       article.append(detail);
-    }
+    });
   } catch (error) {
     const notice = document.querySelector(".notice");
     if (notice) notice.textContent = "政策比較データを読み込めませんでした。回答内容は保存されています。時間をおいて再読み込みしてください。";
