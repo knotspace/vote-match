@@ -1,58 +1,102 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><meta name="description" content="政策に関する質問に答えて、政党や候補者の考え方と比較するボートマッチ。"><title>ボートマッチ｜政策を比べる</title><style>
-
-:root{color-scheme:light;--bg:#fff;--paper:#fff;--ink:#20252b;--muted:#626b75;--line:#d7dce1;--blue:#0757a6;--blue2:#edf4fb;--nav:#fff}
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="政策についての質問に答え、自分の考えを整理するボートマッチ。質問・比較方法・データの出典を明示します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ボートマッチ｜政策を比べる">
+<meta property="og:description" content="政策についての質問に答えて、自分の考えを整理しよう。">
+<title>ボートマッチ｜政策を比べる</title>
+<style>
+:root{--ink:#20252b;--muted:#626b75;--line:#d7dce1;--blue:#0757a6;--pale:#edf4fb;--soft:#f5f7f9}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.75;font-size:15px}
-a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
-button,input,select{font:inherit}
-.bar{background:#fff;color:var(--ink);padding:0;border-bottom:1px solid #cfd5db}
-.bar .wrap{min-height:66px;display:flex;align-items:center}
-.wrap{width:min(100% - 40px,960px);margin:auto}
-.brand{font-size:21px;font-weight:800;letter-spacing:.01em;color:#20252b!important;text-decoration:none!important}
-.brand small{font-size:12px;font-weight:500;color:#66717d;margin-left:12px;letter-spacing:0}
-.main{padding:36px 0 72px}
-.eyebrow{font-size:12px;color:#6a737d;font-weight:700;letter-spacing:.08em}
-.title{font-size:clamp(26px,4vw,34px);line-height:1.45;margin:8px 0 12px;font-weight:750}
-.lead{color:#515b66;margin:0 0 26px}
-.card{background:#fff;border:1px solid #d4d9de;border-radius:3px;padding:clamp(18px,4vw,30px);box-shadow:none}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #0757a6;border-radius:3px;padding:12px 22px;background:#0757a6;color:#fff;text-decoration:none;font-weight:700;cursor:pointer}
-.btn.light{background:#fff;color:#0757a6;border:1px solid #9baaba}
-.btn:disabled{opacity:.4;cursor:not-allowed}
-.row{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.progress{height:6px;border-radius:0;background:#e7eaed;overflow:hidden;margin:12px 0 24px}
-.progress span{display:block;height:100%;background:#0757a6;width:0}
-.qtitle{font-size:22px;line-height:1.6;margin:12px 0 22px;font-weight:700}
-.choices{display:grid;gap:0;border-top:1px solid #d7dce1}
-.choice{width:100%;text-align:left;border:0;border-bottom:1px solid #d7dce1;background:#fff;padding:16px 14px;cursor:pointer;color:var(--ink);border-radius:0}
-.choice:before{content:"";display:inline-block;width:15px;height:15px;border:1px solid #8d98a3;border-radius:50%;vertical-align:-2px;margin-right:12px}
-.choice.active{outline:2px solid #0757a6;outline-offset:-2px;background:#f0f6fc;padding:16px 14px}
-.choice.active:before{border:5px solid #0757a6}
-.muted{color:var(--muted);font-size:13px}
-.foot{padding:24px 0;color:#626b75;font-size:12px;border-top:1px solid #d7dce1;background:#f7f8f9}
-.topic{padding:3px 8px;border-radius:2px;background:#edf4fb;color:#0757a6;font-size:12px;font-weight:700;display:inline-block}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
-.theme{display:flex;gap:10px;align-items:flex-start;border:0;border-top:1px solid #d7dce1;border-radius:0;padding:12px 4px;background:#fff}
-.theme input{margin-top:6px;accent-color:#0757a6}
-.field{width:100%;padding:12px;border:1px solid #aeb8c2;border-radius:2px;background:#fff;color:var(--ink)}
-.divider{border:0;border-top:1px solid #d7dce1;margin:22px 0}
-.result-row{padding:16px 0;border-bottom:1px solid #d7dce1}
-.result-row:last-child{border:0}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.row.actions{align-items:stretch}.row.actions .btn{flex:1}.main{padding-top:24px}.brand{font-size:19px}}
-
-.hero{padding:22px 0 28px;border-bottom:1px solid #d7dce1}
-.hero h1{font-size:clamp(28px,5vw,40px);line-height:1.45;margin:10px 0 14px;font-weight:800}
-.hero .lead{max-width:760px;font-size:16px}
-.start{margin-top:8px}
-.section-title{font-size:22px;margin:32px 0 14px;padding-left:12px;border-left:4px solid #0757a6}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.tile{border:1px solid #d7dce1;padding:20px;background:#fff}
-.tile h2{font-size:19px;margin:0 0 8px}
-.tile p{margin:0 0 14px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.steps div{border-top:2px solid #0757a6;padding-top:12px}
-@media(max-width:600px){.tiles,.steps{grid-template-columns:1fr}.hero{padding-top:10px}}
-</style></head><body><header class="bar"><div class="wrap"><a class="brand" href="./">ボートマッチ <small>政策比較</small></a></div></header><main class="wrap main">
-<section class="hero"><div class="eyebrow">政策を比べる・考えを整理する</div><h1>あなたの考えに近い政策は？</h1><p class="lead">政策に関する質問に答えると、政党や選挙の候補者が公表した考え方と比較できます。まずは関心のあるテーマを選んで、質問に回答してください。</p><a class="btn start" href="answer.html">質問に回答する　›</a></section>
-<h2 class="section-title">ボートマッチを選ぶ</h2><div class="tiles"><section class="tile"><div class="eyebrow">いつでも利用できます</div><h2>政党マッチ</h2><p class="muted">国政政党の政策について、あなたの考え方と比較します。</p><a href="answer.html">政党マッチを始める　›</a></section><section class="tile"><div class="eyebrow">選挙ごとの特集</div><h2>直近の選挙でマッチ</h2><p class="muted">選挙当時の公約や候補者の回答を、選挙区ごとに振り返ります。</p><a href="answer.html">選挙区を選んで始める　›</a></section></div>
-<h2 class="section-title">利用の流れ</h2><div class="steps"><div><strong>1. テーマを選択</strong><p class="muted">関心のある政策テーマを選びます。</p></div><div><strong>2. 質問に回答</strong><p class="muted">質問ごとに、最も近い考えを選びます。</p></div><div><strong>3. 結果を確認</strong><p class="muted">回答内容と照合できる政策データを確認します。</p></div></div>
-<p class="muted" style="margin-top:30px">※このサービスは特定の政党・候補者への投票を勧めるものではありません。回答はこの端末内に保存されます。</p><p class="muted"><a href="https://news.web.nhk/senkyo/database/shugiin/2026/votematch/" target="_blank" rel="noopener">参考：NHK 衆議院選挙ボートマッチ</a></p></main><footer class="foot"><div class="wrap">政策比較のためのボートマッチ</div></footer></body></html>
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.8;font-size:15px}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid #f0a000;outline-offset:3px}
+.wrap{width:min(100% - 40px,1000px);margin:auto}
+header{border-bottom:1px solid var(--line);background:#fff}
+.head{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:var(--ink);text-decoration:none;font-size:21px;font-weight:800;letter-spacing:.02em}
+.brand small{font-size:11px;color:var(--muted);font-weight:500;margin-left:10px}
+nav{display:flex;gap:22px;font-size:13px}
+nav a{color:#4c5661;text-decoration:none}
+nav a:hover{text-decoration:underline}
+main{padding-bottom:64px}
+.hero{padding:58px 0 42px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue)}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.4;letter-spacing:.01em;margin:12px 0 16px}
+.lead{font-size:16px;color:#515b66;max-width:760px;margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 22px;background:var(--blue);border:1px solid var(--blue);border-radius:3px;color:#fff;text-decoration:none;font-weight:700}
+.btn.secondary{background:#fff;color:var(--blue);border-color:#9baaba}
+.btn:hover{filter:brightness(.95)}
+.section{padding:34px 0 0}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:9px;margin-bottom:18px}
+h2{font-size:21px;margin:0;font-weight:750}
+.section-head span{font-size:12px;color:var(--muted)}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mode{border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;min-height:220px}
+.mode .tag{font-size:11px;color:var(--blue);font-weight:700;letter-spacing:.08em}
+.mode h3{font-size:20px;margin:7px 0}
+.mode p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.mode a{margin-top:auto;font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{border-top:3px solid var(--blue);padding-top:12px}
+.step b{font-size:13px;color:var(--blue);letter-spacing:.08em}
+.step h3{font-size:16px;margin:4px 0}
+.step p{font-size:13px;color:var(--muted);margin:0}
+.notice{background:var(--soft);border-left:4px solid #8a969f;padding:16px 18px;font-size:13px;color:#4f5963}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;border-top:1px solid var(--line)}
+.links a{display:block;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none}
+.links a:hover{text-decoration:underline}
+footer{border-top:1px solid var(--line);background:#f7f8f9;padding:24px 0;color:var(--muted);font-size:12px}
+footer .footrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:650px){.wrap{width:min(100% - 32px,1000px)}.head{height:auto;min-height:62px;align-items:flex-start;flex-direction:column;justify-content:center;padding:10px 0;gap:4px}nav{gap:16px;flex-wrap:wrap}.hero{padding:38px 0 30px}.modes,.steps,.links{grid-template-columns:1fr}.mode{min-height:0}.section-head{align-items:flex-end}.section-head span{max-width:45%;text-align:right}}
+</style>
+</head>
+<body>
+<header><div class="wrap head">
+<a class="brand" href="./">ボートマッチ <small>政策比較</small></a>
+<nav aria-label="メインメニュー"><a href="answer.html">質問に回答</a><a href="about.html">このサイトについて</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<div class="kicker">POLICY MATCHING / 自分の考えを知る</div>
+<h1>政策を比べて、<br>自分の考えを見つける。</h1>
+<p class="lead">政策に関する質問に答えて、考え方を整理するためのボートマッチです。回答の根拠や比較方法を大切にし、確認できないデータから一致率を作ることはしません。</p>
+<div class="hero-actions"><a class="btn" href="answer.html">質問に回答する　›</a><a class="btn secondary" href="about.html">比較方法・データについて</a></div>
+</section>
+<section class="section" aria-labelledby="choose-title">
+<div class="section-head"><h2 id="choose-title">比較メニュー</h2><span>目的に合わせて選択</span></div>
+<div class="modes">
+<article class="mode"><div class="tag">PARTY POLICY</div><h3>政党の政策と比べる</h3><p>国政政党の政策について、自分の考えを整理します。政党の回答データが確認できた設問のみ、一致度の計算対象にします。</p><a href="answer.html?mode=party">政党マッチを始める　›</a></article>
+<article class="mode"><div class="tag">ELECTION / CANDIDATES</div><h3>選挙区の候補者と比べる</h3><p>選挙区を指定して候補者との比較を行うための入口です。候補者の回答が確認できない場合は、結果を推測で補いません。</p><a href="answer.html?mode=election">選挙区を選んで始める　›</a></article>
+</div>
+</section>
+<section class="section" aria-labelledby="flow-title">
+<div class="section-head"><h2 id="flow-title">利用の流れ</h2><span>かんたん3ステップ</span></div>
+<div class="steps">
+<div class="step"><b>STEP 01</b><h3>テーマを選ぶ</h3><p>関心のある政策テーマだけを選択できます。</p></div>
+<div class="step"><b>STEP 02</b><h3>質問に答える</h3><p>各設問で、今の自分の考えに近い選択肢を選びます。</p></div>
+<div class="step"><b>STEP 03</b><h3>結果を確認する</h3><p>自分の回答と、照合可能な政策データを確認します。</p></div>
+</div>
+</section>
+<section class="section" aria-labelledby="policy-title">
+<div class="section-head"><h2 id="policy-title">このサイトの基本方針</h2></div>
+<div class="notice"><strong>特定の政党・候補者への投票を勧めるサイトではありません。</strong><br>一致率は投票先を決める唯一の基準ではありません。政策の背景、実現方法、財源、候補者個人の活動なども、各自で確認してください。データの出典・対象時点・未回答の扱いは、比較結果とあわせて明示します。</div>
+</section>
+<section class="section" aria-labelledby="info-title">
+<div class="section-head"><h2 id="info-title">案内・参考情報</h2></div>
+<div class="links">
+<a href="about.html">このサイトについて・比較方法　›</a>
+<a href="answer.html?resume=1">前回の回答を再開する　›</a>
+<a href="https://news.web.nhk/senkyo/database/shugiin/2026/votematch/" target="_blank" rel="noopener noreferrer">参考：NHK 衆議院選挙ボートマッチ　↗</a>
+<a href="https://www.soumu.go.jp/senkyo/" target="_blank" rel="noopener noreferrer">参考：総務省 選挙関連情報　↗</a>
+</div>
+</section>
+</main>
+<footer><div class="wrap footrow"><span>ボートマッチ｜政策比較</span><span>回答データは利用者の端末内に保存されます。</span></div></footer>
+</body></html>
