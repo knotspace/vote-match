@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "datasetName": "第51回衆議院議員総選挙・政党公式公約資料インデックス",
+  "election": "第51回衆議院議員総選挙（2026年2月8日投開票）",
+  "scopeNote": "早稲田大学デモクラシー創造研究所の2026年衆院選マニフェスト比較が示す対象政党を基礎に、減税日本・ゆうこく連合も個別掲載。政党の合併・名称変更や選挙後の政策更新とは区別する。",
+  "checkedAt": "2026-11-08",
+  "methodology": [
+    "公式の選挙公約・政策集を優先する。",
+    "政党の公約本文にない政策を、他党や報道の説明だけで補わない。",
+    "各政策の要約と、設問の選択肢に対応する評価は別に保持する。",
+    "明確な根拠がない設問は一致度計算から除外し、未確認と表示する。",
+    "公約の対象時点・資料名・原文URLを表示する。"
+  ],
+  "parties": [
+    {
+      "id": "jimin",
+      "name": "自由民主党",
+      "documents": [
+        {
+          "title": "政権公約2026（第51回衆議院選挙）",
+          "url": "https://storage.jimin.jp/pdf/pamphlet/202601_manifest.pdf",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "総合政策集2026 J-ファイル",
+          "url": "https://storage.jimin.jp/pdf/pamphlet/202601_j-file_pamphlet.pdf",
+          "type": "official_policy_collection"
+        },
+        {
+          "title": "公式 公約・政策パンフレット一覧",
+          "url": "https://www.jimin.jp/policy/pamphlet/",
+          "type": "official_index"
+        }
+      ]
+    },
+    {
+      "id": "ishin",
+      "name": "日本維新の会",
+      "documents": [
+        {
+          "title": "コア・マニフェスト2026",
+          "url": "https://o-ishin.jp/coalition2025/img/index/core_manifesto_2026.pdf",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "維新八策2026 個別政策",
+          "url": "https://o-ishin.jp/policy/8saku2026.html",
+          "type": "official_policy_collection"
+        }
+      ]
+    },
+    {
+      "id": "chudo",
+      "name": "中道改革連合",
+      "documents": [
+        {
+          "title": "2026主要政策パンフレット",
+          "url": "https://craj.jp/static/downloads/craj_policies-2026-full.pdf",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "2026主要政策テキスト版",
+          "url": "https://craj.jp/static/downloads/craj_policies-2026-text_20260122.pdf",
+          "type": "official_policy_collection"
+        }
+      ]
+    },
+    {
+      "id": "kokumin",
+      "name": "国民民主党",
+      "documents": [
+        {
+          "title": "政策パンフレット2026",
+          "url": "https://election2026.new-kokumin.jp/file/DPFP-PolicyCollection2026.pdf",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "公式政策",
+          "url": "https://new-kokumin.jp/policies",
+          "type": "official_policy_index"
+        }
+      ]
+    },
+    {
+      "id": "sansei",
+      "name": "参政党",
+      "documents": [
+        {
+          "title": "第51回衆議院選挙公約",
+          "url": "https://sanseito.jp/51th_hor_election_policy/",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "参政党の政策2026",
+          "url": "https://sanseito.jp/political_measures_2026/",
+          "type": "official_policy_collection"
+        }
+      ]
+    },
+    {
+      "id": "jcp",
+      "name": "日本共産党",
+      "documents": [
+        {
+          "title": "2026総選挙 重点政策",
+          "url": "https://www.jcp.or.jp/web_policy/16323.html",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "2026総選挙政策パンフレット",
+          "url": "https://www.jcp.or.jp/cms/wp-content/uploads/2026/01/2026-sousenkyo-seisaku-jcp.pdf",
+          "type": "official_manifesto_pdf"
+        },
+        {
+          "title": "各分野の政策",
+          "url": "https://www.jcp.or.jp/web_policy/#ssbunya",
+          "type": "official_policy_index"
+        }
+      ]
+    },
+    {
+      "id": "reiwa",
+      "name": "れいわ新選組",
+      "documents": [
+        {
+          "title": "衆院選2026マニフェスト",
+          "url": "https://shu51.reiwa-shinsengumi.com/wp-content/uploads/2026/01/2026-Reiwashinsengumi-manifest.pdf",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "基本政策",
+          "url": "https://reiwa-shinsengumi.com/policy/",
+          "type": "official_policy_collection"
+        }
+      ]
+    },
+    {
+      "id": "hoshuto",
+      "name": "日本保守党",
+      "documents": [
+        {
+          "title": "重点政策項目",
+          "url": "https://hoshuto.jp/policy/",
+          "type": "official_policy_collection"
+        }
+      ]
+    },
+    {
+      "id": "genzei-yukoku",
+      "name": "減税日本・ゆうこく連合",
+      "documents": [
+        {
+          "title": "減税日本 政策",
+          "url": "https://genzeinippon.com/seisaku/",
+          "type": "official_policy_collection"
+        },
+        {
+          "title": "ゆうこく連合 公式サイト",
+          "url": "https://yukoku.org/",
+          "type": "official_policy_index"
+        }
+      ],
+      "note": "両団体の資料は別々に確認し、連合として共同公約が確認できる項目と、各団体固有の政策を混同しない。"
+    },
+    {
+      "id": "sdp",
+      "name": "社会民主党",
+      "documents": [
+        {
+          "title": "2026衆議院総選挙公約",
+          "url": "https://sdp.or.jp/2026election/",
+          "type": "official_manifesto"
+        },
+        {
+          "title": "2026衆議院総選挙公約（冊子）",
+          "url": "https://sdp.or.jp/51-repre-elec/",
+          "type": "official_manifesto"
+        }
+      ]
+    },
+    {
+      "id": "team-mirai",
+      "name": "チームみらい",
+      "documents": [
+        {
+          "title": "2026衆院選 チームみらい公約",
+          "url": "https://note.com/team_mirai_jp/n/nf20faf54f7d8",
+          "type": "official_manifesto"
+        }
+      ]
+    }
+  ],
+  "crossReferenceSources": [
+    {
+      "title": "早稲田大学デモクラシー創造研究所 #くらべてえらぶ衆院選2026",
+      "url": "https://waseda-idi.jp/kurabete2026",
+      "note": "各党のマニフェストをテーマ別に比較する第三者資料。公式公約そのものの代わりにはしない。"
+    },
+    {
+      "title": "難民支援協会・2026年衆院選 各政党の公約比較",
+      "url": "https://www.refugee.or.jp/report/refugee/2026/01/manifest2602/",
+      "note": "外国人・難民政策の横断比較。公式資料へのリンクも掲載。"
+    },
+    {
+      "title": "NHK 衆議院選挙2026 ボートマッチ",
+      "url": "https://news.web.nhk/senkyo/database/shugiin/2026/votematch/",
+      "note": "参考とする既存ボートマッチ。"
+    }
+  ],
+  "status": "source_index_created_policy_transcription_and_question_mapping_in_progress"
+}
