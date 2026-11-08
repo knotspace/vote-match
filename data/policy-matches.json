@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "title": "第51回衆議院議員総選挙 公約比較データ（限定版）",
+  "title": "第51回衆議院議員総選挙 公約比較データ（拡張版）",
   "checkedAt": "2026-11-08",
-  "scope": "2026年衆院選の公約比較。現在の党の全政策・最新政策を網羅するものではない。",
+  "scope": "2026年衆院選の政党公約を22問の設問に照らして整理した参考比較。政党の公式アンケート回答ではなく、公約の記述と設問の意味が十分に対応すると確認できる場合のみ採点する。",
   "scoring": "各設問について公約の方向性が選択肢と明確に対応すると確認できる場合のみ選択肢番号を付与。曖昧・記載なし・選択肢と軸が異なる場合は null とし、分母に含めない。",
   "questions": {
     "2": {
@@ -41,6 +41,84 @@
           "choice": 0,
           "summary": "消費税ゼロを即時実現する方針。"
         },
+        "team-mirai": null
+      }
+    },
+    "4": {
+      "title": "日本の防衛力",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183042.html",
+      "sourceLabel": "テレビ朝日「外交・安全保障」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": null,
+        "ishin": {
+          "choice": 0,
+          "summary": "長射程ミサイルの展開や次世代動力潜水艦の保有を進め、抑止力を強化する方針。"
+        },
+        "chudo": null,
+        "kokumin": null,
+        "jcp": {
+          "choice": 3,
+          "summary": "軍事費の大幅増額や長射程ミサイル配備に反対する方針。"
+        },
+        "reiwa": null,
+        "sansei": {
+          "choice": 0,
+          "summary": "自立的な防衛力の確立を掲げ、防衛力・日米同盟・国際連携を柱とする方針。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 3,
+          "summary": "九州・沖縄などへのミサイル配備と基地機能強化に反対する方針。"
+        },
+        "team-mirai": null
+      }
+    },
+    "6": {
+      "title": "日米安全保障体制",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183042.html",
+      "sourceLabel": "テレビ朝日「外交・安全保障」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 0,
+          "summary": "日米同盟を基軸に外交・安全保障を進める方針。"
+        },
+        "ishin": null,
+        "chudo": null,
+        "kokumin": null,
+        "jcp": null,
+        "reiwa": null,
+        "sansei": {
+          "choice": 1,
+          "summary": "自立的な防衛を確立し、対等な日米同盟と国際連携を推進する方針。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": null,
+        "team-mirai": null
+      }
+    },
+    "7": {
+      "title": "武器輸出のルール",
+      "source": "https://www.jimin.jp/election/results/sen_shu51/political_promise/manifesto/03/",
+      "sourceLabel": "自由民主党「政権公約2026」安全保障政策（2026年1月）",
+      "mappings": {
+        "jimin": {
+          "choice": 0,
+          "summary": "防衛装備移転三原則の運用指針にある5類型を撤廃し、防衛装備移転を積極的に推進する方針。"
+        },
+        "ishin": {
+          "choice": 0,
+          "summary": "自民党とともに防衛装備移転三原則の運用指針見直し・5類型撤廃を提言した。"
+        },
+        "chudo": null,
+        "kokumin": null,
+        "jcp": null,
+        "reiwa": null,
+        "sansei": null,
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": null,
         "team-mirai": null
       }
     },
@@ -128,6 +206,33 @@
         "team-mirai": null
       }
     },
+    "10": {
+      "title": "政治資金の透明性",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183081.html",
+      "sourceLabel": "テレビ朝日「政治とカネ」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 1,
+          "summary": "「禁止よりも公開」を掲げ、政治資金の透明性・公開性を強化する方針。"
+        },
+        "ishin": null,
+        "chudo": null,
+        "kokumin": {
+          "choice": 0,
+          "summary": "政治資金監視委員会設置法案を成立させ、第三者機関による監視を強化する方針。"
+        },
+        "jcp": null,
+        "reiwa": null,
+        "sansei": null,
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": null,
+        "team-mirai": {
+          "choice": 1,
+          "summary": "政治資金の流れを市民が追えるツールを活用する方針。"
+        }
+      }
+    },
     "12": {
       "title": "年金制度",
       "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183073.html",
@@ -204,6 +309,36 @@
           "choice": 3,
           "summary": "影響への配慮を行いながら医療費自己負担割合を一律3割とすることを目指す。"
         }
+      }
+    },
+    "14": {
+      "title": "子育て世帯への支援",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183050.html",
+      "sourceLabel": "テレビ朝日「教育・子育て支援」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": null,
+        "ishin": null,
+        "chudo": {
+          "choice": 0,
+          "summary": "18歳までの全ての子どもへの児童手当を月1万5千円に増額することなどを検討する方針。"
+        },
+        "kokumin": null,
+        "jcp": {
+          "choice": 1,
+          "summary": "保育所・学童保育所の条件整備、保育士の配置基準引き上げ、学童保育の待機児童解消を掲げる。"
+        },
+        "reiwa": {
+          "choice": 0,
+          "summary": "子ども手当を一律月3万円とする方針。"
+        },
+        "sansei": {
+          "choice": 0,
+          "summary": "0～15歳の子ども一人につき月10万円の教育給付金を支給する方針。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": null,
+        "team-mirai": null
       }
     },
     "15": {
@@ -358,6 +493,42 @@
           "summary": "基本原理を堅持しつつ、時代に合わせた改正も視野に検討する方針。"
         }
       }
+    },
+    "20": {
+      "title": "憲法9条",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183077.html",
+      "sourceLabel": "テレビ朝日「憲法改正」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": {
+          "choice": 0,
+          "summary": "自衛隊の明記を含む憲法改正4項目の実現を掲げる。"
+        },
+        "ishin": {
+          "choice": 0,
+          "summary": "憲法9条の改正と国会発議を掲げる。"
+        },
+        "chudo": {
+          "choice": 3,
+          "summary": "自衛隊の憲法上の位置付けなどを含め、国会で責任ある改正論議を深める方針。"
+        },
+        "kokumin": null,
+        "jcp": {
+          "choice": 2,
+          "summary": "憲法9条を守り抜き、改憲に反対する方針。"
+        },
+        "reiwa": null,
+        "sansei": null,
+        "genzei-yukoku": null,
+        "hoshuto": {
+          "choice": 0,
+          "summary": "憲法9条2項の削除と、自衛のための実力組織の保持明記を掲げる。"
+        },
+        "sdp": {
+          "choice": 2,
+          "summary": "憲法9条に基づく平和外交を推進し、安保法制の廃止を掲げる。"
+        },
+        "team-mirai": null
+      }
     }
   },
   "parties": [
@@ -419,7 +590,9 @@
   ],
   "limitations": [
     "これは政党がこのサイトの設問に回答した公式アンケートではなく、公約の記述を選択肢に対応づけた参考比較。",
-    "選択肢との対応に解釈が入る場合がある。特に複数の政策を同時に掲げる政党は、一つの選択肢だけで立場を表せない場合がある。",
-    "現時点で照合できるのは22問中9問のみ。候補者別データは未登録。"
+    "選択肢との対応に解釈が入る場合がある。複数の政策を同時に掲げる政党や、設問の軸と公約の軸が異なる場合は単一選択肢へ無理に割り当てない。",
+    "現時点で照合データを登録した設問は22問中15問。残る7問は、設問と公約の意味が十分に対応する根拠を確認できていないため未登録。",
+    "各党の公約に記載がないことと、党がその政策に反対していることは同じではない。未記載・未確認はnullとして扱う。",
+    "候補者別データは未登録。候補者本人の公開回答または確認可能な一次資料が得られるまで候補者一致率は算出しない。"
   ]
 }
