@@ -10,7 +10,7 @@
   if (notice) {
     notice.innerHTML = "";
     const strong = document.createElement("strong");
-    strong.textContent = "公約を確認できた2設問で参考比較できます";
+    strong.textContent = "公約を確認できた6設問で参考比較できます";
     const p = document.createElement("p");
     p.className = "muted";
     p.style.margin = "6px 0 0";
@@ -38,7 +38,7 @@
   scoreSection.append(intro);
   if (!scoreRows.length) {
     const p = document.createElement("p");
-    p.textContent = "比較対象の設問にまだ回答していません。消費税・企業団体献金の質問に回答すると比較できます。";
+    p.textContent = "比較対象の設問にまだ回答していません。消費税・企業団体献金・外国人政策・教育費・夫婦別姓・憲法改正の質問に回答すると比較できます。";
     scoreSection.append(p);
   }
   scoreRows.forEach((party, i) => {
