@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/tailwind.css -o ./assets/tailwind.css --minify"
+    "build:css": "@tailwindcss/cli -i ./src/tailwind.css -o ./assets/tailwind.css --minify"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
   }
 }
