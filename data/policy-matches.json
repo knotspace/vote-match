@@ -128,6 +128,84 @@
         "team-mirai": null
       }
     },
+    "12": {
+      "title": "年金制度",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183073.html",
+      "sourceLabel": "テレビ朝日「医療・社会保障」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": null,
+        "ishin": {
+          "choice": 2,
+          "summary": "最低保障年金の構築を掲げる。"
+        },
+        "chudo": {
+          "choice": 2,
+          "summary": "低所得の高齢者への年金上乗せ給付や厚生年金の適用拡大を掲げる。"
+        },
+        "kokumin": {
+          "choice": 2,
+          "summary": "年金の最低保障機能強化を掲げる。"
+        },
+        "jcp": {
+          "choice": 0,
+          "summary": "マクロ経済スライドを撤廃し、物価・賃金に見合う年金額の引き上げを掲げる。"
+        },
+        "reiwa": {
+          "choice": 2,
+          "summary": "最低保障年金の導入を検討する方針。"
+        },
+        "sansei": null,
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 2,
+          "summary": "最低保障年金制度と基礎年金の増額を掲げる。"
+        },
+        "team-mirai": null
+      }
+    },
+    "13": {
+      "title": "医療・介護の提供体制",
+      "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183073.html",
+      "sourceLabel": "テレビ朝日「医療・社会保障」各党公約整理（2026年2月3日）",
+      "mappings": {
+        "jimin": null,
+        "ishin": {
+          "choice": 1,
+          "summary": "病院の機能・人員配置を精査し、医療提供体制の再編を進める方針。"
+        },
+        "chudo": {
+          "choice": 1,
+          "summary": "予防・検診の強化や重複検査是正、医療DXによる医療費抑制を掲げる。"
+        },
+        "kokumin": {
+          "choice": 3,
+          "summary": "後期高齢者医療の窓口負担を原則2割とするなど、能力に応じた負担と医療給付の適正化を掲げる。"
+        },
+        "jcp": {
+          "choice": 0,
+          "summary": "診療報酬を増額し、患者負担増を避けるため国費投入と窓口負担軽減を掲げる。"
+        },
+        "reiwa": {
+          "choice": 0,
+          "summary": "公立・国立病院の統廃合や病床削減を行わず、緊急時にも対応できる医療体制を掲げる。"
+        },
+        "sansei": {
+          "choice": 0,
+          "summary": "診療・介護・障害福祉報酬の引き上げと従事者の待遇改善を掲げる。"
+        },
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 0,
+          "summary": "高額医療費等の自己負担増に反対し、国公立病院の統廃合に反対する。"
+        },
+        "team-mirai": {
+          "choice": 3,
+          "summary": "影響への配慮を行いながら医療費自己負担割合を一律3割とすることを目指す。"
+        }
+      }
+    },
     "15": {
       "title": "高校・大学などの教育費負担",
       "source": "https://news.tv-asahi.co.jp/news_politics/articles/900183050.html",
@@ -157,6 +235,45 @@
         "sdp": {
           "choice": 0,
           "summary": "大学までの教育無償化を掲げる。"
+        },
+        "team-mirai": null
+      }
+    },
+    "17": {
+      "title": "原子力発電の今後",
+      "source": "https://foejapan.org/issue/staffblog/2026/01/30/staffblog-27809/",
+      "sourceLabel": "FoE Japan「衆院選2026 各党マニフェスト比較・原発エネルギー編」（2026年1月30日、2月6日更新）",
+      "mappings": {
+        "jimin": {
+          "choice": 1,
+          "summary": "原発再稼働に加え、次世代革新炉の開発・設置を掲げる。"
+        },
+        "ishin": {
+          "choice": 1,
+          "summary": "原発の早期再稼働と次世代革新炉への建て替えを掲げる。"
+        },
+        "chudo": {
+          "choice": 0,
+          "summary": "将来的に原発依存を減らす一方、安全性・避難計画・地元合意を条件に既存原発の再稼働を認める方針。"
+        },
+        "kokumin": {
+          "choice": 1,
+          "summary": "安全基準を満たした原発の早期再稼働と、次世代革新炉の開発・建設（リプレース・新増設を含む）を掲げる。"
+        },
+        "jcp": {
+          "choice": 3,
+          "summary": "原発ゼロを目指し、再稼働・新増設を認めない方針。"
+        },
+        "reiwa": {
+          "choice": 3,
+          "summary": "原発・関連施設の使用を即時禁止し、買い上げ・廃炉を進める方針。"
+        },
+        "sansei": null,
+        "genzei-yukoku": null,
+        "hoshuto": null,
+        "sdp": {
+          "choice": 3,
+          "summary": "再生可能エネルギーの普及で脱原発を進め、原発再稼働に反対する方針。"
         },
         "team-mirai": null
       }
@@ -302,7 +419,7 @@
   ],
   "limitations": [
     "これは政党がこのサイトの設問に回答した公式アンケートではなく、公約の記述を選択肢に対応づけた参考比較。",
-    "選択肢との対応に解釈が入る場合がある。特に公約の対象範囲と設問の粒度が異なる政策は一致率を過信しない。",
-    "現時点で照合できるのは22問中6問のみ。候補者別データは未登録。"
+    "選択肢との対応に解釈が入る場合がある。特に複数の政策を同時に掲げる政党は、一つの選択肢だけで立場を表せない場合がある。",
+    "現時点で照合できるのは22問中9問のみ。候補者別データは未登録。"
   ]
 }
