@@ -25,15 +25,36 @@
 
 <section class="section" id="election-archive">
 <div class="panel">
-<div class="eyebrow">ELECTION ARCHIVE</div>
+<div class="eyebrow">LATEST ELECTION / ARCHIVE MATCH</div>
 <h2>直近の選挙でマッチする</h2>
-<p class="muted">政党だけでなく、実際の選挙で各候補者が掲げた政策や本人回答を、当時の情報で振り返れる特集です。</p>
+<p class="muted">第51回衆議院議員総選挙（2026年2月8日）の候補者・選挙公報を、選挙区ごとに確認できます。</p>
 <div class="theme-grid">
-<div class="theme"><strong>第51回 衆議院議員総選挙</strong><br><span class="muted">投票日：2026年2月8日</span><br><span class="status">選挙区・候補者データ準備中</span></div>
-<div class="theme"><strong>地方選挙アーカイブ</strong><br><span class="muted">市区町村・都道府県ごとの選挙</span><br><span class="status">地域別データ準備中</span></div>
+<div class="theme"><strong>対象選挙</strong><br>第51回 衆議院議員総選挙<br><span class="muted">2026年2月8日投票</span></div>
+<div class="theme"><strong>現在の対応地域</strong><br>栃木県・小選挙区<br><span class="muted">全国対応は順次追加</span></div>
 </div>
-<div class="notice">過去の選挙特集では、当時の候補者・公約・アンケート回答を使用します。現在の政党方針とは分けて掲載し、候補者の回答が確認できない場合は「回答なし」と表示します。</div>
-<p class="muted" style="font-size:12px">選挙日程の確認：<a href="https://www.senkyo.metro.tokyo.lg.jp/election/schedule/senkyo2026" target="_blank" rel="noopener">東京都選挙管理委員会・令和8年選挙執行一覧</a></p>
+<label for="archive-pref" style="display:block;font-weight:750;margin:14px 0 6px">都道府県</label>
+<select id="archive-pref" style="width:100%;padding:13px;border-radius:12px;background:#18263a;color:#edf3fb;border:1px solid #293950;font:inherit"><option value="tochigi">栃木県</option><option value="other">その他の都道府県（準備中）</option></select>
+<label for="archive-area" style="display:block;font-weight:750;margin:14px 0 6px">市町村・地域</label>
+<select id="archive-area" style="width:100%;padding:13px;border-radius:12px;background:#18263a;color:#edf3fb;border:1px solid #293950;font:inherit">
+<option value="">地域を選択</option>
+<option value="1">宇都宮市（旧宇都宮市区域）・河内郡</option>
+<option value="2">宇都宮市（旧上河内町・旧河内町区域）・鹿沼市・日光市・さくら市・塩谷郡</option>
+<option value="3">大田原市・矢板市・那須塩原市・那須烏山市・那須郡</option>
+<option value="4">小山市・真岡市・下野市・芳賀郡・下都賀郡</option>
+<option value="5">足利市・栃木市・佐野市</option>
+</select>
+<div id="archive-result" class="hidden" style="margin-top:20px">
+<div class="topic">YOUR DISTRICT</div><h3 id="archive-district" style="font-size:24px;margin:5px 0"></h3>
+<p class="muted" style="font-size:13px">下の選挙公報は栃木県選挙管理委員会が公開した原本です。候補者が掲げた政策を同じ資料上で読み比べられます。</p>
+<div class="actions" style="justify-content:flex-start;flex-wrap:wrap">
+<a id="archive-pdf" class="btn" href="#" target="_blank" rel="noopener" style="text-decoration:none">選挙公報を開く ↗</a>
+<a href="https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/index.html" target="_blank" rel="noopener" class="btn secondary" style="text-decoration:none">候補者一覧・公式資料 ↗</a>
+</div>
+<iframe id="archive-viewer" title="選挙公報" style="width:100%;height:620px;border:1px solid #293950;border-radius:14px;background:#fff;margin-top:16px" loading="lazy"></iframe>
+<div class="notice">この資料は2026年衆院選当時の選挙公報です。現在の所属・政策を示すものではありません。候補者の政策を自動採点した一致率は、内容を設問ごとに検証するまで表示しません。</div>
+</div>
+<div id="archive-pending" class="notice">地域を選ぶと、該当する小選挙区の選挙公報を表示します。</div>
+<p class="muted" style="font-size:12px;margin-top:18px">出典：<a href="https://www.pref.tochigi.lg.jp/senkyo/r08syugi/" target="_blank" rel="noopener">栃木県選挙管理委員会・第51回衆議院議員総選挙</a> ／ <a href="https://www.pref.tochigi.lg.jp/k05/pref/senkyo/shuusangiin/shugi.html" target="_blank" rel="noopener">栃木県の衆議院議員選挙記録</a></p>
 </div>
 </section>
 <section class="section" id="themes">
@@ -86,5 +107,10 @@ function render(){const q=questions[index];$("count").textContent="質問 "+(ind
 function finish(){const answered=answers.filter(x=>x!==null&&x!==questions[0].a.length).length;$("summary").innerHTML="<p><strong>"+answered+" / "+questions.length+"</strong> 問に回答しました。</p>";const list=document.createElement("div");questions.forEach((q,i)=>{const d=document.createElement("div");d.className="party";const val=answers[i]===null?"未回答":answers[i]===q.a.length?"回答しない":q.a[answers[i]];d.innerHTML="<div class='topic'>"+q.t+"</div><div class='party-name'>"+q.q+"</div><div class='muted'>"+val+"</div>";list.append(d)});$("summary").append(list);$("parties").innerHTML=parties.map(p=>"<div class='party'><span class='party-name'></span> <span class='status'>公式回答・根拠資料の確認中</span></div>").join("");[...$("parties").querySelectorAll(".party-name")].forEach((el,i)=>el.textContent=parties[i]);show("results")}
 function begin(){index=0;show("quiz");render()}
 $("start").onclick=begin;$("start2").onclick=begin;$("back").onclick=()=>{if(index>0){index--;render()}};$("next").onclick=()=>{if(index<questions.length-1){index++;render()}else finish()};$("revise").onclick=()=>{index=0;show("quiz");render()};$("restart").onclick=()=>{answers=Array(questions.length).fill(null);begin()};
+
+const archivePdfs={1:"https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/kouhou1.pdf",2:"https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/kouhou2.pdf",3:"https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/kouhou3.pdf",4:"https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/kouhou4.pdf",5:"https://www.pref.tochigi.lg.jp/senkyo/r08syugi/kouho/kouhou5.pdf"};
+const archiveArea=document.getElementById("archive-area");
+if(archiveArea){archiveArea.addEventListener("change",()=>{const n=archiveArea.value;const result=document.getElementById("archive-result");const pending=document.getElementById("archive-pending");if(!n){result.classList.add("hidden");pending.classList.remove("hidden");return;}const url=archivePdfs[n];document.getElementById("archive-district").textContent="栃木県 第"+n+"区";document.getElementById("archive-pdf").href=url;document.getElementById("archive-viewer").src=url+"#view=FitH";result.classList.remove("hidden");pending.classList.add("hidden");});}
+document.getElementById("archive-pref")?.addEventListener("change",e=>{if(e.target.value==="other"){archiveArea.disabled=true;archiveArea.value="";document.getElementById("archive-result").classList.add("hidden");document.getElementById("archive-pending").textContent="他の都道府県の過去選挙データは順次追加します。";}else{archiveArea.disabled=false;document.getElementById("archive-pending").textContent="地域を選ぶと、該当する小選挙区の選挙公報を表示します。";}});
 </script>
 </body></html>
