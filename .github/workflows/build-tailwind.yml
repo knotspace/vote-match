@@ -1,0 +1,44 @@
+name: Build Tailwind CSS
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "package.json"
+      - "src/tailwind.css"
+      - "tailwind-test.html"
+      - ".github/workflows/build-tailwind.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tailwind-css-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install
+      - name: Build minified CSS
+        run: npm run build:css
+      - name: Commit generated CSS
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/tailwind.css
+          if git diff --cached --quiet; then
+            echo "No CSS changes."
+            exit 0
+          fi
+          git commit -m "Build Tailwind CSS assets"
+          git push
