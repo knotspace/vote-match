@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@source "../tailwind-test.html";
+
+@theme {
+  --color-match-blue: #0757a6;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
