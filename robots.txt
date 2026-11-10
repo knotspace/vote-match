@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://knotspace.github.io/vote-match/sitemap.xml
