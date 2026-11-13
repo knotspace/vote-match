@@ -14,7 +14,7 @@
     if (notice) {
       notice.replaceChildren();
       const strong = document.createElement("strong");
-      strong.textContent = "公約を確認できた9設問で参考比較できます";
+      strong.textContent = "比較可能な公約情報が登録された15設問で参考比較できます";
       const p = document.createElement("p");
       p.className = "muted";
       p.style.margin = "6px 0 0";
@@ -57,7 +57,7 @@
 
     if (!answeredMapped.length) {
       const p = document.createElement("p");
-      p.textContent = "公約比較の対象となる設問（消費税・外国人政策・企業団体献金・年金・医療介護・教育費・原発・夫婦別姓・憲法改正）に回答すると、参考一致度を表示できます。";
+      p.textContent = "公約比較の対象となる15設問（消費税、防衛力、日米安全保障、武器輸出、外国人政策、企業・団体献金、政治資金の透明性、年金、医療・介護、子育て支援、教育費、原子力発電、選択的夫婦別姓、憲法改正、憲法9条）に回答すると、参考一致度を表示できます。";
       scoreSection.append(p);
     }
 
